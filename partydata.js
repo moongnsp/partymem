@@ -55,3 +55,10 @@ function updateRecord(formData) {
     selectedRow.cells[2].innerHTML = formData.sex;
     selectedRow.cells[3].innerHTML = formData.p_number;
 }
+function onDelete(td) {
+    if (confirm('정말 레코드를 지우시겠습니까?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
