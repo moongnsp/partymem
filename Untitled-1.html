@@ -21,6 +21,27 @@
                     margin: auto;
                     width: 70%;
                             }
+
+                            body > table{
+                            width: 80%;
+                            }
+
+                            table{
+                            border-collapse: collapse;
+                                    }
+                table.list{
+                            width:100%;
+                                        }
+
+                            td, th {
+                    border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                                }
+
+                    tr:nth-child(even),table.list thead>tr {
+                     background-color: #dddddd;
+                            }
                             
 
     </style>
@@ -52,12 +73,12 @@
                     </div>
                     <br>
                     <div>
-                        <label>성별: </label>  <!-- salary에서 sex로 -->
+                        <label>성별: </label>  
                         <input type="text" name="sex" id="sex">
                     </div>
                     <br>
                     <div>
-                        <label>전화번호: </label> <!--city에서 p_number로-->
+                        <label>전화번호: </label> 
                         <input type="text" name="p_number" id="p_number">
                     </div>
                     <br>
@@ -75,10 +96,10 @@
                 <table class="list" id="employeeList" >
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Email Id</th>
-                            <th>Salary</th>
-                            <th>City</th>
+                            <th>이름</th>
+                            <th>이메일</th>
+                            <th>성별</th>
+                            <th>전화번호</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
