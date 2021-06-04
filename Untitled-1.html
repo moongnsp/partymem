@@ -2,9 +2,26 @@
 <html>
 <head>
     <style>
-        body{background-color: antiquewhite;}
+        body{background-color: snow;
+        color: rgb(41, 38, 38);}
         img { display : block;
                 margin : auto;}
+
+
+                .employee-form {
+              border-style: solid;
+             padding: 10px;
+             margin: auto;
+             width: 50%;
+                    }
+
+                    .employees-table {
+                 border-style: solid;
+                  padding: 20px;
+                    margin: auto;
+                    width: 70%;
+                            }
+                            
 
     </style>
 	<meta charset="utf-8">
@@ -13,41 +30,37 @@
 </head>
 <body>
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> chaewon2
 
     <img src="rhkwp.png" width="400">
 
    
+    <h2>Party Attendance List</h2>
 
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> chaewon2
 
 	<hr>
 			<div class="employee-form">
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>이름</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                        <label>이름: </label><label class="validation-error hide" id="fullNameValidationError"></label>
                         <input type="text" name="fullName" id="fullName">
                     </div>
+                    <br>
                     <div>
-                        <label>이메일 아이디</label>
+                        <label>이메일: </label>
                         <input type="text" name="email" id="email">
                     </div>
+                    <br>
                     <div>
-                        <label>성별</label>  <!-- salary에서 sex로 -->
+                        <label>성별: </label>  <!-- salary에서 sex로 -->
                         <input type="text" name="sex" id="sex">
                     </div>
+                    <br>
                     <div>
-                        <label>전화번호</label> <!--city에서 p_number로-->
+                        <label>전화번호: </label> <!--city에서 p_number로-->
                         <input type="text" name="p_number" id="p_number">
                     </div>
+                    <br>
                     <div  class="form-action-buttons">
                         <input type="submit" value="전송">
                     </div>
@@ -74,6 +87,6 @@
                     </tbody>
                 </table>
         </div>
-    <script src="script.js"></script>
+    <script src="partydata.js"></script>
 </body>
 </html>
