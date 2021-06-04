@@ -42,3 +42,10 @@ function resetForm() {
     document.getElementById("p_number").value = "";
     selectedRow = null;
 }
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("email").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("sex").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("p_number").value = selectedRow.cells[3].innerHTML;
+}
