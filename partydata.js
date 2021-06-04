@@ -35,3 +35,10 @@ function insertNewRecord(data) {
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
+function resetForm() {
+    document.getElementById("fullName").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("sex").value = "";
+    document.getElementById("p_number").value = "";
+    selectedRow = null;
+}
