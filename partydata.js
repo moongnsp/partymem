@@ -49,3 +49,28 @@ function onEdit(td) {
     document.getElementById("sex").value = selectedRow.cells[2].innerHTML;
     document.getElementById("p_number").value = selectedRow.cells[3].innerHTML;
 }
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.fullName;
+    selectedRow.cells[1].innerHTML = formData.email;
+    selectedRow.cells[2].innerHTML = formData.sex;
+    selectedRow.cells[3].innerHTML = formData.p_number;
+}
+function onDelete(td) {
+    if (confirm('정말 레코드를 지우시겠습니까?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+function validate() {
+    isValid = true;
+    if (document.getElementById("fullName").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+            document.getElementById("fullNameValidationError").classList.add("hide");
+    }
+    return isValid;
+}
